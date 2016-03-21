@@ -1,62 +1,143 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
+
+  <title>Blackjack</title>
   <meta charset="utf-8">
-  <title>val demo</title>
+
   <style>
-  p {
-    color: blue;
-    margin: 8px;
-  }
+    html {
+      background-image: url(http://www.brianmitchellfoundation.org/wp-content/uploads/2015/08/173-04062014061745.png);
+    }
+    #dealer1 {
+      position: absolute;
+      left: 50px;
+      top: 50px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #dealer2 {
+      position: absolute;
+      left: 65px;
+      top: 6px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #dealer3 {
+      position: absolute;
+      left: 65px;
+      top: 8px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #dealer4 {
+      position: absolute;
+      left: 65px;
+      top: 10px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #dealer5 {
+      position: absolute;
+      left: 65px;
+      top: 12px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #player1 {
+      position: absolute;
+      left: -271px;
+      top: 244px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #player2 {
+     position: absolute;
+      left: 68px;
+      top: 10px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #player3 {
+     position: absolute;
+      left: 68px;
+      top: 10px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #player4 {
+     position: absolute;
+      left: 68px;
+      top: 10px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #player5 {
+     position: absolute;
+      left: 68px;
+      top: 10px; border: 2px solid #E91E63;
+      width: 79px; height: 123px;
+      background-color: grey;
+    }
+    #reset {
+      position: relative;
+      left: 286px;
+      top: -163px; border: 2px solid #E91E63;
+    }
+    #Hit {
+      position: relative;
+      left: 290px;
+      top: -120px; border: 2px solid #E91E63;
+      width: 62px;
+      border-radius: 100%
+    }
+    #Stand {
+      position: relative;
+      left: 290px;
+      top: -98px; border: 2px solid #E91E63;
+      width: 62px;
+      border-radius: 100%;
+    }
   </style>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  </head>
-
-
 </head>
 <body>
-<h1>Todo List</h1>
-<div id="Input-box">
-<label for="new-todo">Enter your new task here:</label>
-<input type="text" name="new-todo" id="new-todo">
-<button class="btn" type="button" id="add-button">Add todo
-</button>
-<div>
-<table id="todos">
-  <thead>
-    <tr>
-      <th>Todo name</th>
-      <th>Complete</th>
-      <th>Remove</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Get this assigment done</td>
-      <td><input type="checkbox" name="completed"></td>
-      <td><input type="checkbox" name="completed"></td>
-    </tr>
-  </tbody>
-</table>
 
-<script>
+  <table align="center" border="0;">
+    <tbody>
+      <tr>
+        <td>
+          <div style="position: relative; border: thick solid #660; width: 800px; height: 600px">
+            <div style="position: absolute; left: 20px; top: 15px; color: black; font-size: large">Dealer's cards:</div>
+            <div id="dealer1"</div>
+            <div id="dealer2"</div>
+            <div id="dealer3"</div>
+            <div id="dealer4"</div>
+            <div id="dealer5"</div>
 
-// background-color: #280;
+            <div style="position: absolute; left: -297px; top: 190px; color: black; font-size: large">Player's cards:</div>
+            <div id="player1"</div>
+            <div id="player2"</div>
+            <div id="player3"</div>
+            <div id="player4"</div>
+            <div id="player5"</div>
 
-/*var bla = $('#txt_name').val();
+            <button id="reset">New Game</button>
+            <div id="messageBox"</div>
+            <button id="Hit">Hit</button>
+            <button id="Stand">Stand</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-$('#txt_name').val('bla');
+  <script>
+    var reset = document.getElementById("reset");
 
-$(function(){
-    $('button').on('click',function(){
-        var r= $('<input type="button" value="new button"/>');
-        $("body").append(r);
+    reset.addEventListener("click", function () {
+      var card1 = Math.floor(Math.random() * 52 + 1);
+      alert("Your score is " + card1%13);
     });
-});*/
- <div id="dealer1" style="position: absolute; left: 50px; top: 50px; border: 2px solid rgb(102,102, 0); width: 79px; height: 123px; background-color: grey;">
-    </div>
-
-</script>
-
+  </script>
 </body>
 </html>
