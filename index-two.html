@@ -1,0 +1,156 @@
+<DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+html {
+    background-image: url(http://www.brianmitchellfoundation.org/wp-content/uploads/2015/08/173-04062014061745.png);
+}
+#dealer1 {
+  position: absolute;
+  left: 50px;
+  top: 50px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#dealer2 {
+  position: absolute;
+  left: 65px;
+  top: 6px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#dealer3 {
+  position: absolute;
+  left: 65px;
+  top: 8px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#dealer4 {
+  position: absolute;
+  left: 65px;
+  top: 10px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#dealer5 {
+  position: absolute;
+  left: 65px;
+  top: 12px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#player1 {
+  position: absolute;
+  left: -271px;
+  top: 244px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#player2 {
+ position: absolute;
+  left: 68px;
+  top: 10px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#player3 {
+ position: absolute;
+  left: 68px;
+  top: 10px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#player4 {
+ position: absolute;
+  left: 68px;
+  top: 10px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#player5 {
+ position: absolute;
+  left: 68px;
+  top: 10px; border: 2px solid #E91E63;
+  width: 79px; height: 123px;
+  background-color: grey;
+}
+#reset {
+  position: relative;
+  left: 286px;
+  top: -163px; border: 2px solid #E91E63;
+}
+#Hit {
+  position: relative;
+  left: 290px;
+  top: -120px; border: 2px solid #E91E63;
+  width: 62px;
+  border-radius: 100%
+}
+#Stand {
+  position: relative;
+  left: 290px;
+  top: -98px; border: 2px solid #E91E63;
+  width: 62px;
+  border-radius: 100%;
+}
+
+
+</style>
+<script>
+var rst = 'Are you ready to play Blackjack';
+
+function gameReload() {
+  var el = document.getElementById('reset');
+  el.textContent = rst;
+}
+gameReload();
+</script>
+<body>
+
+
+<table align="center" border="0;">
+
+  <tbody>
+
+    <tr>
+      <td>
+        <div style="position: relative; border: thick solid #660;
+        width: 800px; height: 600px">
+          <div style="position: absolute; left: 20px; top: 15px; color: black; font-size: large">Dealer's cards:</div>
+            <div id="dealer1"</div>
+            <div id="dealer2"</div>
+            <div id="dealer3"</div>
+            <div id="dealer4"</div>
+            <div id="dealer5"</div>
+            <div style="position: absolute; left: -297px; top: 190px; color: black; font-size: large">Player's cards:</div>
+            <div id="player1"</div>
+            <div id="player2"</div>
+            <div id="player3"</div>
+            <div id="player4"</div>
+            <div id="player5"</div>
+<button id="reset">New Game</button>
+<div id="messageBox"</div>
+<button id="Hit">Hit</button>
+<button id="Stand">Stand</button>
+
+      </td>
+    </tr>
+
+
+<script>
+ var reset = document.getElementById("reset");
+
+    reset.addEventListener("click", function () {
+    var card1 = Math.floor(Math.random() * 52 + 1);
+    alert("Your score is " + card1%13);
+});
+
+
+</script>
+</tbody>
+</table>
+</body>
+</html>
