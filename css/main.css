@@ -1,0 +1,85 @@
+html {
+  background-image: url(http://www.brianmitchellfoundation.org/wp-content/uploads/2015/08/173-04062014061745.png);
+}
+
+.table-container {
+  position: relative;
+  border: thick solid #660;
+  width: 800px;
+  height: 600px;
+}
+
+.card-list {
+  position: absolute;
+  left: 20px;
+  color: black;
+  background-color: white;
+  font-size: large;
+}
+.dealers-cards { top: 15px; }
+.players-cards { top: 280px; }
+
+.card { position: absolute; }
+#dealer1 {
+  left: 70px;
+  top: 65px;
+}
+#dealer2 {
+  left: 135px;
+  top: 75px;
+}
+#dealer3 {
+  left: 200px;
+  top: 85px;
+}
+#dealer4 {
+  left: 265px;
+  top: 95px;
+}
+#dealer5 {
+  left: 330px;
+  top: 105px;
+}
+#player1 {
+  left: 70px;
+  top: 330px;
+}
+#player2 {
+  left: 135px;
+  top: 340px;
+}
+#player3 {
+  left: 200px;
+  top: 350px;
+}
+#player4 {
+  left: 265px;
+  top: 360px;
+}
+#player5 {
+  left: 330px;
+  top: 370px;
+}
+
+.button {
+  border: 2px solid #E91E63;
+}
+.round {
+  width: 62px;
+  border-radius: 100%;
+}
+#reset-game {
+  position: absolute;
+  right: 90px;
+  top: 220px;
+}
+#hit {
+  position: absolute;
+  right: 95px;
+  top: 260px;
+}
+#stand {
+  position: absolute;
+  right: 95px;
+  top: 300px;
+}

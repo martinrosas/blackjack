@@ -54,3 +54,14 @@ function updateTime() {
 <script src="timers.js"></script>
 </body>
 </html>
+
+
+```
+// EXAMPLE: how to make a card you have dealt show up!
+var card = dealRandomCard();
+
+player1 = document.getElementById("player1");
+
+player1.classList.add(card)
+player1.classList.remove("back-red")
+```
