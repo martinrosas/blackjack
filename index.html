@@ -20,15 +20,16 @@
             <div id="dealer2" class="card large shadow back-blue"></div>
             <div id="dealer3" class="card large shadow back-blue"></div>
             <div id="dealer4" class="card large shadow back-blue"></div>
-            <div id="dealer5" class="card large shadow sA"></div>
+            <div id="dealer5" class="card large shadow back-blue"></div>
 
             <div class="players-cards card-list">Player's cards:</div>
             <div id="player1" class="card large shadow back-red"></div>
             <div id="player2" class="card large shadow back-red"></div>
             <div id="player3" class="card large shadow back-red"></div>
             <div id="player4" class="card large shadow back-red"></div>
-            <div id="player5" class="card large shadow c02"></div>
+            <div id="player5" class="card large shadow back-red"></div>
 
+            <button id="deal" class="button">Deal Cards</button>
             <button id="reset-game" class="button">New Game</button>
             <div id="messageBox"></div>
             <button id="hit" class="button round">Hit</button>
@@ -40,6 +41,13 @@
   </table>
 
   <script>
+  /*var cardValues = {
+     "sA" ===11,  "sK" ===10, "sQ" ===10, "sJ" ===10, "s10" ===10, "s09" ===9, "s08" ===8, "s07" ===7, "s06" ===6, "s05" ===5, "s04" ===4, "s03" ===3, "s02" ===2,
+      "dA" ===11, "dK" ===10, "dQ" ===10, "dJ" ===10, "d10" ===10, "d09" ===9, "d08" ===8, "d07" ===7, "d06" ===6, "d05" ===5, "d04" ===4, "d03" ===3, "d02" ===2,
+      "hA" ===11, "hK" ===10, "hQ" ===10, "hJ" ===10, "h10" ===10, "h09" ===9, "h08" ===8, "h07" ===7, "h06" ===6, "h05" ===5, "h04" ===4, "h03" ===3, "h02" ===2,
+      "cA", ===11, "cK" ===10,"cQ" ===10, "cJ" ===10, "c10" ===10, "c09" ===9, "c08" ===8, "c07" ===7, "c06" ===6, "c05" ===5, "c04" ===4, "c03" ===3, "c02" ===2,
+  }*/
+
     var resetGame = document.getElementById("reset-game");
 
     resetGame.addEventListener("click", function () {
@@ -50,6 +58,7 @@
         "cA", "cK", "cQ", "cJ", "c10", "c09", "c08", "c07", "c06", "c05", "c04", "c03", "c02"
       ];
       console.log("Deck is reset!");
+
     });
 
     var deck = [
@@ -70,6 +79,29 @@
       // we have to access the "first"/only item in the array
       return cardArray[0];
     }
+
+  var dealCards = document.getElementById("deal");
+
+  dealCards.addEventListener("click", function () {
+  var card1 = dealRandomCard();
+  var card2 = dealRandomCard();
+  var card3 = dealRandomCard();
+  var card4 = dealRandomCard();
+player1 = document.getElementById("player1");
+player2 = document.getElementById("player2");
+dealer1 = document.getElementById("dealer1");
+dealer2 = document.getElementById("dealer2");
+
+player1.classList.add(card1)
+player1.classList.remove("back-red")
+player2.classList.add(card2)
+player2.classList.remove("back-red")
+dealer1.classList.add(card3)
+dealer1.classList.remove("back-blue")
+dealer2.classList.add(card4)
+dealer2.classList.remove("back-blue")
+});
+
   </script>
 </body>
 </html>
