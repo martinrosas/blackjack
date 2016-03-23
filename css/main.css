@@ -2,6 +2,12 @@ html {
   background-image: url(http://www.brianmitchellfoundation.org/wp-content/uploads/2015/08/173-04062014061745.png);
 }
 
+#messageBox {
+  position: relative;
+  top: 380px;
+  left: 592px;
+  font-weight: bold;
+}
 .table-container {
   position: relative;
   border: thick solid #660;
