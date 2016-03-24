@@ -1,16 +1,16 @@
 html {
-  background-image: url(http://www.brianmitchellfoundation.org/wp-content/uploads/2015/08/173-04062014061745.png);
+  background-image: url("../images/bjtable.png");
 }
 
 #messageBox {
   position: relative;
   top: 380px;
-  left: 592px;
+  left: 505px;
   font-weight: bold;
+  font-size: 25px;
 }
 .table-container {
   position: relative;
-  border: thick solid #660;
   width: 800px;
   height: 600px;
 }
@@ -22,8 +22,8 @@ html {
   background-color: white;
   font-size: large;
 }
-.dealers-cards { top: 15px; }
-.players-cards { top: 280px; }
+.dealers-cards { top: 15px; font-family: fantasy; }
+.players-cards { top: 280px; font-family: fantasy;}
 
 .card { position: absolute; }
 #dealer1 {
