@@ -47,6 +47,7 @@
   var turn = "player"
 
   var currentPlayerCard;
+  var currentDealerCard = 1;
 
   //counts the total score of  dealer and player
   var count = {
@@ -135,32 +136,38 @@
     objMessage.innerHTML = ("You have " + count.player + " Hit or Stand?")
     //document.getElementById("deal").disabled = true;
     //document.getElementById("hit").disabled = true;
-    currentPlayerCard +=1;
+
+    if (currentPlayerCard < 5) {
+      currentPlayerCard +=1;
+      playerBust()
+    }
+    else{
+      dealerTurn()
+    }
+
+
 
 }
 });
+    function dealerTurn () {
+    turn = "dealer"
+    while (count.dealer <= 17 && currentDealerCard < 5) {
+    currentDealerCard +=1;
+    var card = dealRandomCard();
+    dealer = document.getElementById("dealer" + currentDealerCard);
+    console.log("dealer" + currentDealerCard)
+    dealer.classList.add(card)
+    dealer.classList.remove("back-blue")
+    count.dealer += cardValues[card]
+
+    }
+      return(getScore())
+
+}
+
   //switches to dealer
   var noMas = document.getElementById("stand");
-    noMas.addEventListener("click", function () {
-    turn = "dealer"
-    var card4 = dealRandomCard();
-    dealer2 = document.getElementById("dealer2");
-    dealer2.classList.add(card4)
-    dealer2.classList.remove("back-blue")
-    count.dealer += cardValues[card4]
-    getScore()
-
-    if (count.dealer <= 17)
-    dealer3 = document.getElementById("dealer3");
-    dealer3.classList.add(card4)
-    dealer3.classList.remove("back-blue")
-    count.dealer += cardValues[card4]
-    getScore()
-
-
-
-
-  });
+    noMas.addEventListener("click", dealerTurn);
 
     //get winner function
     function getScore () {
@@ -181,6 +188,8 @@
   function playerBust () {
     if (count.player > 21)
       alert("Player bust, Dealer wins!");
+    //document.getElementById("hit").disabled = true;
+    //document.getElementById("stand").disabled = true;
 
   }
 
