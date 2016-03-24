@@ -22,8 +22,21 @@ html {
   background-color: white;
   font-size: large;
 }
-.dealers-cards { top: 15px; font-family: fantasy; }
-.players-cards { top: 280px; font-family: fantasy;}
+
+.dealers-cards {
+  top: 15px;
+  font-family: fantasy;
+  background-color: #208020;
+  color: yellow;
+}
+
+.players-cards {
+  top: 280px;
+  font-family: fantasy;
+  color: yellow;
+  background-color: #208020;
+
+}
 
 .card { position: absolute; }
 #dealer1 {
@@ -73,6 +86,7 @@ html {
 .round {
   width: 62px;
   border-radius: 100%;
+  font-weight: 700
 }
 #reset-game {
   position: absolute;
